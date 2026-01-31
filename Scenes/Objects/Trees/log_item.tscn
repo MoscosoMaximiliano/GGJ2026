@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4quu3akisovp"]
+
+[ext_resource type="Texture2D" uid="uid://cnfg2urtdwkpa" path="res://Assets/Sprout Lands - Sprites - Basic pack/Objects/Basic Grass Biom things 1.png" id="1_vifhd"]
+[ext_resource type="PackedScene" uid="uid://8d37og7yh6ai" path="res://Scenes/Components/collectable_component.tscn" id="2_wmtn0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lha41"]
+radius = 6.0
+
+[node name="Log" type="Sprite2D"]
+texture = ExtResource("1_vifhd")
+region_enabled = true
+region_rect = Rect2(80.08504, 32.329216, 16.250168, 15.294281)
+
+[node name="CollectableComponent" parent="." instance=ExtResource("2_wmtn0")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableComponent"]
+shape = SubResource("CircleShape2D_lha41")
